@@ -3,63 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museum Exhibit: Ancient Artifact</title>
+    <title>Museum Exhibit</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f5f5f5;
+            background-color: #f4f4f4;
             color: #333;
         }
         .container {
             max-width: 800px;
-            margin: 50px auto;
-            background: #fff;
+            margin: 20px auto;
+            background: white;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
-            color: #2c3e50;
+            color: #444;
         }
-        .image {
+        .image-container {
             text-align: center;
         }
         img {
             max-width: 100%;
-            border-radius: 8px;
+            border-radius: 10px;
         }
         .description {
             margin-top: 20px;
             line-height: 1.6;
         }
-        .fact-box {
-            background: #ecf0f1;
-            padding: 15px;
-            border-left: 5px solid #3498db;
-            margin-top: 20px;
+        .interactive {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Ancient Artifact: The Golden Mask</h1>
-        <div class="image">
-            <img src="https://via.placeholder.com/800x400" alt="Golden Mask">
+        <h1>Ancient Artifact Exhibit</h1>
+        <div class="image-container">
+            <img src="artifact.jpg" alt="Ancient Artifact">
         </div>
         <div class="description">
-            <p>The Golden Mask of Pharaoh is an exquisite artifact dating back to 1323 BC. This stunning piece was discovered in the tomb of the ancient Egyptian king, showcasing intricate craftsmanship and a glimpse into the afterlife beliefs of the civilization.</p>
+            <p>This artifact dates back to the 15th century and was discovered in an ancient temple. Made of bronze and adorned with intricate carvings, it offers insight into the rich history and craftsmanship of past civilizations.</p>
+            <p>Experts believe it was used in religious ceremonies and symbolizes wisdom, power, and spiritual connection.</p>
         </div>
-        <div class="fact-box">
-            <h3>Interesting Facts:</h3>
-            <ul>
-                <li>Made from 11 kg of solid gold.</li>
-                <li>Inlaid with semi-precious stones and lapis lazuli.</li>
-                <li>Symbolizes divine protection and immortality.</li>
-                <li>Found in the tomb of King Tutankhamun in 1922.</li>
-            </ul>
+        <div class="interactive">
+            <button class="btn" onclick="alert('More details coming soon!')">Learn More</button>
+            <button class="btn" onclick="alert('Thank you for your interest!')">Give Feedback</button>
         </div>
     </div>
 </body>
