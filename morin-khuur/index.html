@@ -408,6 +408,49 @@
     </style>
 </head>
 <body>
+    <div id="videoModal" class="modal hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+  <div class="bg-white p-4 rounded-lg max-w-xl w-full relative">
+    <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl">&times;</button>
+    <video id="modalVideo" controls class="w-full rounded-md">
+      <source src="Messenger_creation_9771547222907776.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+    <style>
+  .hidden {
+    display: none;
+  }
+</style>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("modalVideo");
+    const openBtn = document.querySelector(".audio-control");
+    const closeBtn = document.getElementById("closeModal");
+
+    openBtn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      video.currentTime = 0;
+      video.play();
+    });
+
+    closeBtn.addEventListener("click", () => {
+      video.pause();
+      modal.classList.add("hidden");
+    });
+
+    // Optional: close modal by clicking outside video box
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        video.pause();
+        modal.classList.add("hidden");
+      }
+    });
+  });
+</script>
+    
     <header>
         <img src="https://chinggismuseum.com/_next/image?url=%2Fnew_logo_en.png&w=128&q=75" />
         <h1 data-i18n="name"></h1>
